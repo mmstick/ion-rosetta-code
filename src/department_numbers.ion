@@ -1,0 +1,16 @@
+# http://rosettacode.org/wiki/Department_Numbers
+
+for fire in 1...7
+    for police in 1...7
+        for sanitation in 1...7
+            if test $((fire + police + sanitation)) -eq 12 &&
+                test $fire -ne $police &&
+                test $police -ne $sanitation &&
+                test $fire -ne $sanitation &&
+                test $((police % 2)) -eq 0
+
+                echo $fire $police $sanitation
+            end
+        end
+    end
+end

@@ -1,0 +1,5 @@
+# http://rosettacode.org/wiki/String_length
+
+let string = @args[1]
+echo "chars:" $len(string)
+echo "bytes:" $len_bytes(string)

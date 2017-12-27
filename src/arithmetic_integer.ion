@@ -1,0 +1,11 @@
+# http://rosettacode.org/wiki/Arithmetic/Integer
+
+let a = @args[1]
+let b = @args[2]
+
+echo "a + b =" $((a + b))
+echo "a - b =" $((a - b))
+echo "a * b =" $((a * b))
+echo "a / b =" $((a / b)) # TODO: Integer result
+echo "a % b =" $((a % b))
+echo "a ** b =" $((a ** b))

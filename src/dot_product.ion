@@ -1,0 +1,13 @@
+# http://rosettacode.org/wiki/Dot_product
+
+let a = [1  3 -5]
+let b = [4 -2 -1]
+
+let result = 0
+for i in {0...2}
+    let aa = @a[$i]
+    let bb = @b[$i]
+    let result += $((aa * bb))
+end
+
+echo $result

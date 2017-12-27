@@ -1,0 +1,9 @@
+# http://rosettacode.org/wiki/Command-line_arguments
+
+echo There are $len(@args) command-line arguments
+
+let index = 0
+for arg in @args
+    echo \@args\[$index\]: \"$arg\"
+    let index += 1
+end

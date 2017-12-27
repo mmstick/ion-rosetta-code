@@ -1,0 +1,5 @@
+# http://rosettacode.org/wiki/Even_or_odd
+
+let n = @args[1]
+
+test $((n & 1)) -eq 0 && echo Event || echo Odd

@@ -1,0 +1,4 @@
+# http://rosettacode.org/wiki/Array_length
+
+let array = [apple orange]
+echo $len(@array)

@@ -1,0 +1,22 @@
+# http://rosettacode.org/wiki/99_Bottles_of_Beer
+
+fn bottle_string count
+    if test $count -eq 0
+        echo No more bottles
+    else if test $count -eq 1
+        echo One bottle
+    else
+        echo $count bottles
+    end
+end
+
+for bottle in {99..0}
+    echo $(bottle_string $bottle) of beer on the wall
+    echo $(bottle_string $bottle) of beer
+
+    let bottle_next = $((bottle - 1))
+    echo Take one down, pass it around
+    echo $(bottle_string $bottle_next) of beer on the wall
+
+    echo
+end
