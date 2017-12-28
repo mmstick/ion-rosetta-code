@@ -1,0 +1,19 @@
+# http://rosettacode.org/wiki/Roman_numerals/Encode
+
+fn to_roman n
+    let weights = [1000 900 500 400 100 90 50 40 10 9 5 4 1]
+    let symbols = [M CM D CD C XC L XL X IX V IV I]
+
+    let roman = ""
+    for i in 0...12
+        while test $n -ge @weights[$i]
+            let roman = $roman@symbols[$i]
+            let n -= @weights[$i]
+        end
+    end
+    echo $roman
+end
+
+to_roman 1990
+to_roman 2008
+to_roman 1666
