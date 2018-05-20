@@ -1,0 +1,37 @@
+# http://rosettacode.org/wiki/Fibonacci_sequence
+
+# Iterative
+
+fn fibonacci_iter n
+    if test $n -lt 2
+        echo $n
+    else
+        let output prev = 1 1
+        for _ in 2..$n
+            let temp = $output
+            let output += $prev
+            let prev = $temp
+        end
+        echo $output
+    end
+end
+
+for i in 0...15
+    fibonacci_iter $i
+end
+
+# Recursive
+
+fn fibonacci_rec n
+    if test $n -lt 2
+        echo $n
+    else
+        let n1 n2 = $((n - 1)) $((n - 2))
+        let f1 f2 = $(fibonacci_rec $n1) $(fibonacci_rec $n2)
+        echo $((f1 + f2))
+    end
+end
+
+for i in 0...15
+    fibonacci_rec $i
+end

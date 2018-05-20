@@ -14,9 +14,9 @@ end
 
 product2 [1 2] [3 4]
 product2 [3 4] [1 2]
-product2 [1 2] [] # Incorrect results
-product2 [] [1 2] # Incorrect results
+product2 [1 2] [] # TODO: Incorrect results
+product2 [] [1 2] # TODO: Incorrect results
 
 product4 [1776 1789] [7 12] [4 14 23] [0 1]
 product3 [1 2 3] [30] [500 100]
-product3 [1 2 3] [] [500 100] # Incorrect results
+product3 [1 2 3] [] [500 100] # TODO: Incorrect results

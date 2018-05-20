@@ -2,6 +2,7 @@
 
 # Translation of the D implementation
 # TODO: It gives incorrect results, Ion fucks up the parameters in the recursive function call
+# https://github.com/redox-os/ion/issues/728
 
 fn hanoi n from to via
     #echo Debug: $n $from $to $via

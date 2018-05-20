@@ -1,0 +1,18 @@
+# http://rosettacode.org/wiki/Sierpinski_triangle
+
+let size = 5
+let size = $((2 ** size))
+
+# TODO: Ranges are borked in Ion (decreasing or negative limits)
+
+for y in {$size..0}
+    for i in 1..$y
+        echo -n " "
+    end
+
+    for x in 1..$((size - y + 2))
+        test $(( (x - 1) & (y - 1) )) -ne 0 && echo -n "  " || echo -n "* "
+    end
+
+    echo
+end

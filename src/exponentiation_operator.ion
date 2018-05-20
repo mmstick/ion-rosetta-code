@@ -1,0 +1,30 @@
+# http://rosettacode.org/wiki/Exponentiation_operator
+
+# Built-in
+
+echo $((2 ** 6))
+echo $((2 ** -6))
+echo $((2.71 ** 6))
+echo $((2.71 ** -6))
+
+# Iterative
+
+fn exponentiation_iter base exp
+    let result = $base
+    if test $exp -lt 0
+        for _ in 0...$((-exp))
+            let result /= $base
+        end
+    else
+        for _ in 1..$exp
+            let result *= $base
+        end
+    end
+    echo $result
+end
+
+exponentiation_iter 2 6
+exponentiation_iter 2 -6
+exponentiation_iter 2.71 6
+exponentiation_iter 2.71 -6
+
