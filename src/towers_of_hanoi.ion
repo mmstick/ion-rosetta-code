@@ -1,0 +1,15 @@
+# http://rosettacode.org/wiki/Towers_of_Hanoi
+
+# Translation of the D implementation
+# TODO: It gives incorrect results, Ion fucks up the parameters in the recursive function call
+
+fn hanoi n from to via
+    #echo Debug: $n $from $to $via
+    if test $n -gt 0
+        hanoi $((n - 1)) $from $via $to
+        echo Move disk $n from $from to $to
+        hanoi $((n - 1)) $via $to $from
+    end
+end
+
+hanoi 3 L M R
